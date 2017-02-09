@@ -1,0 +1,158 @@
+/* =================================
+  Base Element Styles
+==================================== */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Sansita";
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  line-height: 1.5em;
+}
+
+body {
+  transform: translateZ(0PX);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: "Caveat Brush";
+  text-shadow: 0 0 4px white, 3px 3px 1px black;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+p {
+  color: white;
+  margin: 1em 0;
+  z-index: 1;
+  position: relative;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+
+/* ---- Layout Containers ---- */
+
+.fixedDiv {
+  position: fixed;
+  top: 0px;
+  width: 1px;
+  height: 1px;
+  z-index: 1;
+}
+
+.viewport {
+  perspective-origin: right bottom;
+  perspective: 1px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+.container {
+  transform-style: preserve-3d;
+}
+
+.scene {
+  height: 150vh;
+  padding: 5vh 10vw;
+}
+
+.parallax {
+  /*display: block;*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  width: auto;
+  height: 130vh;
+  /* Since the parallax elements still consume space, we set the margin to undo the height of this parallas element making it essentially consume 0 space. */
+  margin-bottom: -130vh;
+}
+
+/* ---- Page Elements ---- */
+
+.woods:not(.header),
+.sunset:not(.header) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sunset:not(.header) {
+  align-items: flex-end;
+}
+
+.solid {
+  z-index: 1;
+  position: relative;
+  height: 70vh; /* may need to change this for first solid pane */
+  font-size: 1.5em;
+  line-height: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.solid.star {
+  background-color: red;
+  /*background-image: linear-gradient(hsla(140, 90%, 8%, 1) 0%, 99%, hsla(217, 24%, 71%, 0) 100%);*/
+  /*box-shadow: -10px -10px 20px hsla(240, 90%, 8%);*/
+}
+
+.solid.woods {
+  background-color: purple;
+  /*box-shadow: -10px -10px 20px hsl(195, 16%, 49%);*/
+}
+
+/*.firstBackground {
+  transform-origin: right bottom 0px;
+  transform: scale(1.66327) translate3d(0px, 742.515px, -0.663265px);
+  display: block;
+  background-image: url('../img/women-639221_960_720.jpg');
+  }*/
+  /* ned to fix background image sizing */
+
+.firstBackground {
+  background-image: url('../img/dance-1199934_960_720.jpg');
+  background-position: left;
+}
+
+.secondBackground {
+  transform-origin: right bottom 0px;
+  transform: scale(1.66327) translate3d(0px, 312.638px, -0.663265px);
+  background-image: url('../img/trendy-female-silhouette-background.jpg');
+  background-position: left;
+}
+.thirdBackground {
+  transform-origin: right bottom 0px;
+  transform: scale(3.33333) translate3d(0px, -67.9px, -2.33333px);
+  background-image: url('../img/universe-1044107_960_720.jpg');
+  background-position: center;
+}
+
+/* =================================
+  Media Queries
+==================================== */

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Sahitya|Sansita" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/parallax.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        initializeParallax(document.querySelector('.viewport'));
+      });
+    </script>
+</head>
+
+<body>
+  <div class="fixedDiv"></div> <!-- I don't what to call this -->
+  <div class="viewport">
+    <div class="container">
+      <!-- Start of 1st pane, should turn into hero??? image -->
+      <!-- Specifying a parallax rate of 0.3 will slide the image at that proportion of the scroll speed. -->
+      <div class="parallax firstBackground" parallax="0.3"></div>
+      <!-- add nav bar?? -->
+      <div class="scene">
+        <h1>Top Image</h1>
+        <h2>Tag Line??</h2>
+      </div>
+      <!-- End of 1st pane -->
+
+      <!--  Start 1st solid pane  -->
+      <div class="scene solid star">
+        <p>
+          This is where I will put a flexbox that has icons to click for:
+        </p>
+        <p>
+          Portfolio, and other stuff I can't think of right now.  They will be flexbox items tho.
+        </p>
+      </div>
+      <!-- End of 1st solid pane -->
+
+      <!-- Start 2nd pane -->
+      <!-- When a rate isn't specified, it will be calculated such that the image always fills the space between the
+           element before it and the next element with the "parallax-cover" attribute. -->
+      <div class="parallax secondBackground" parallax></div>
+      <div class="scene woods">
+        <h1>Text and stuff</h1>
+        <h2>smaller text and stuff</h2>
+      </div>
+      <!-- End of 2nd pane -->
+
+      <!-- Start 2nd solid pane -->
+      <div class="scene solid woods" parallax-cover>
+        <p>
+          I'm nobody's taxi service; I'm not gonna be there to catch you every time you feel like jumping out of a spaceship. I hate yogurt. It's just stuff with bits in. I hate yogurt. It's just stuff with bits in.
+        </p>
+        <p>
+          You hit me with a cricket bat. You know how I sometimes have really brilliant ideas? No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister. Saving the world with meals on wheels.
+        </p>
+      </div>
+      <!-- End of 2nd solid pane -->
+
+      <!-- /* Start 3rd pane */ -->
+      <div class="parallax thirdBackground" parallax></div>
+      <div class="scene sunset">
+        <h1>Third pane stuff</h1>
+        <h2>Third pane stuff in h2</h2>
+      </div>
+      <!-- End of 3rd pane -->
+    </div>
+  </div>
+</body>
+</html>
